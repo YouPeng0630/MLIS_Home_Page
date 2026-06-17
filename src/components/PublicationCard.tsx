@@ -1,7 +1,6 @@
-import { ExternalLink, FileText } from "lucide-react"
+import { FileText } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import type { Publication, PublicationStatus } from "@/data/publications"
 
 const statusConfig: Record<PublicationStatus, { label: string; variant: "success" | "info" | "warning" | "secondary" }> = {
@@ -40,21 +39,19 @@ export function PublicationCard({ publication }: PublicationCardProps) {
         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
           {publication.abstract}
         </p>
-        <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-          {publication.tags.map((tag) => (
-            <Badge key={tag} variant="outline" className="text-xs">
-              {tag}
-            </Badge>
-          ))}
-        </div>
         {publication.link && (
           <div className="pt-1">
-            <Button variant="outline" size="sm" asChild>
-              <a href={publication.link} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="h-3.5 w-3.5" />
-                View Paper
-              </a>
-            </Button>
+            <a
+              href={publication.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="View PDF"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5 text-red-500" fill="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-5h8v1.5H8V15zm0-3h8v1.5H8V12zm0-3h3v1.5H8V9z"/>
+              </svg>
+            </a>
           </div>
         )}
       </CardContent>

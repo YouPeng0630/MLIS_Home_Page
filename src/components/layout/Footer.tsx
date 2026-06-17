@@ -19,14 +19,14 @@ export function Footer() {
           <div className="col-span-1 lg:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
               <FlaskConical className="h-5 w-5 text-primary" />
-              <span className="font-semibold text-foreground">to be filled</span>
+              <span className="font-semibold text-foreground">Unbiased AI for Poetry</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              A research project supported by the Institute of Museum and Library Services (IMLS).
-              This project investigates to be filled to advance to be filled.
+              An IMLS-funded research project developing open-source AI tools to improve
+              the discovery and accessibility of underrepresented poetry in digital libraries.
             </p>
             <p className="text-xs text-muted-foreground">
-              Funded by IMLS Grant #to be filled
+              Funded by IMLS Log Number RE-252382-OLS-22
             </p>
           </div>
 
@@ -53,29 +53,28 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:placeholder@example.edu"
+                  href="mailto:kahyun@illinois.edu"
                   className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  placeholder@example.edu
+                  kahyun@illinois.edu
                 </a>
               </li>
               <li>
                 <a
-                  href="https://example.edu"
+                  href="https://kahyunchoi.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <ExternalLink className="h-3.5 w-3.5" />
-                  to be filled
+                  kahyunchoi.com
                 </a>
               </li>
             </ul>
             <div className="pt-1">
-              <p className="text-xs text-muted-foreground">to be filled</p>
-              <p className="text-xs text-muted-foreground">to be filled</p>
-              <p className="text-xs text-muted-foreground">to be filled</p>
+              <p className="text-xs text-muted-foreground">School of Information Sciences</p>
+              <p className="text-xs text-muted-foreground">University of Illinois Urbana-Champaign</p>
             </div>
           </div>
         </div>
@@ -83,7 +82,7 @@ export function Footer() {
         <Separator className="my-6" />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} to be filled. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Kahyun Choi. All rights reserved.</p>
           <p>
             Supported by the{" "}
             <a

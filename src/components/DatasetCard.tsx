@@ -1,4 +1,4 @@
-import { Download, BookOpen, Scale, Clock } from "lucide-react"
+import { Download, BookOpen, Clock } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -21,11 +21,8 @@ export function DatasetCard({ dataset }: DatasetCardProps) {
   return (
     <Card className="flex flex-col h-full hover:shadow-md transition-shadow">
       <CardHeader className="pb-3">
-        <div className="flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex items-center gap-3 flex-wrap">
           <Badge variant={variant}>{label}</Badge>
-          <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded font-mono">
-            v{dataset.version}
-          </span>
         </div>
         <h3 className="text-base font-semibold leading-snug text-foreground mt-2">
           {dataset.name}
@@ -49,10 +46,6 @@ export function DatasetCard({ dataset }: DatasetCardProps) {
               <span>{dataset.format}</span>
             </div>
           )}
-          <div className="flex items-center gap-1.5 text-muted-foreground">
-            <Scale className="h-3.5 w-3.5 shrink-0" />
-            <span>{dataset.license}</span>
-          </div>
           <div className="flex items-center gap-1.5 text-muted-foreground">
             <Clock className="h-3.5 w-3.5 shrink-0" />
             <span>Updated {dataset.lastUpdated}</span>
@@ -79,14 +72,6 @@ export function DatasetCard({ dataset }: DatasetCardProps) {
             <Button size="sm" variant="secondary" disabled>
               <Download className="h-3.5 w-3.5" />
               {dataset.status === "coming-soon" ? "Coming Soon" : "Not Yet Available"}
-            </Button>
-          )}
-          {dataset.documentationUrl && (
-            <Button size="sm" variant="outline" asChild>
-              <a href={dataset.documentationUrl} target="_blank" rel="noopener noreferrer">
-                <BookOpen className="h-3.5 w-3.5" />
-                Documentation
-              </a>
             </Button>
           )}
         </div>

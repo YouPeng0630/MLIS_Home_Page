@@ -27,7 +27,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-2 font-semibold text-foreground hover:opacity-80 transition-opacity">
             <FlaskConical className="h-5 w-5 text-primary" />
             <span className="hidden sm:inline text-sm font-bold tracking-tight">
-              to be filled
+              Unbiased AI for Poetry
             </span>
           </Link>
 
